@@ -38,18 +38,14 @@ int main()
 
 list *find_value(list *list_pointer, int value)
 {
-    list *ligature;
-
-    ligature = list_pointer;
-
-    while (ligature != NULL)
+    while (list_pointer != NULL)
     {
-        if (ligature->value == value)
+        if (list_pointer->value == value)
         {
-            return (ligature);
+            return (list_pointer);
         }
 
-        ligature = ligature->next;
+        list_pointer = list_pointer->next;
     }
 
     return NULL;
